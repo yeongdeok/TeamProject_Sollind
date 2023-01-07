@@ -53,6 +53,7 @@ function getStarScore() {
 	});
 }
 
+// input에서 엔터키를 입력하면 페이지가 넘어가는것을 방지
 function titleEnterDefence() {
 	$(".cRWTitle").keydown(function(e) {
 		if (e.keyCode == 13) {
