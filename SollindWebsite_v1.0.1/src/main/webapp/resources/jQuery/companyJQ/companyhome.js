@@ -1,4 +1,4 @@
-// 검색어를 입력하고 검색어가 변경될 때마다 검색기록 가져오기
+// 검색어를 입력하고 검색어가 변경될 때마다 실시간 검색기록 가져오기
 function companySearchEvent() {
 	$(".companySearch").keyup(function(e) {
 		if ($(this).val() != "") {
