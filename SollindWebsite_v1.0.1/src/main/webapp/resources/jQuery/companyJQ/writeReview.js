@@ -1,3 +1,4 @@
+// 리뷰작성 할 때, 마우스로 회색별을 선택하면 클릭한 별까지 노란색을 채우기
 function getStarScore() {
 	$(".star1").click(function() {
 		$(".star1").attr("src", "resources/img/companyImg/star.png");
