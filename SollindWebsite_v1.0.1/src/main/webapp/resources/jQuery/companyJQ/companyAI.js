@@ -2,6 +2,7 @@ var doAiDataCheck = "";
 var data = "";
 function doAI() {
 	var check = true;
+	// 입력받은 정보 가져오기
 	$("#companyAITable").find("#aiButtonTd").find("#aiButton").click(function() {
 		var name = $("#companyAITable").find("#companyAIName").val();
 		var info1 = $("#companyAITable").find("#companyAIInfo1").val();
@@ -15,6 +16,8 @@ function doAI() {
 		var star3 = $("#companyAITable").find("#companyAIStarScoreTable").find("#companyAIStar3").val();
 		var star4 = $("#companyAITable").find("#companyAIStarScoreTable").find("#companyAIStar4").val();
 		var star5 = $("#companyAITable").find("#companyAIStarScoreTable").find("#companyAIStar5").val();
+		
+		// 유효성 검사
 		if (name == "" || name == null) {
 			alert("회사명을 입력해주세요");
 			check = false;
@@ -63,6 +66,8 @@ function doAI() {
 			alert("경영진을 입력해주세요");
 			check = false;
 		}
+		
+		// 입력받은 정보 합쳐서 보내기
 		data = info1 + "," + info2 + "," + info3 + "," + info4 + "," + info5 + "," + info6 + "," + star1 + "," + star2 + "," + star3 + "," + star4 + "," + star5;
 		if (check && !(doAiDataCheck==data)) {
 			$.ajax({
